@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+// use App\Http\Controllers\MenuController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,3 +18,5 @@ Route::get('/', [HomeController::class, 'index']);
 Route::get('/contact', [HomeController::class, 'contact']);
 Route::get('/menu', [HomeController::class, 'menu']);
 Route::get('/today', [HomeController::class, 'today']);
+
+// Route::get('/', [MenuController::class, 'menu']);

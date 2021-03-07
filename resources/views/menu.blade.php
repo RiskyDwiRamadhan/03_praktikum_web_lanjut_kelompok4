@@ -57,16 +57,20 @@
         </div>  
       </div>            
       <div class="tm-menu-product-content col-lg-9 col-md-9"> <!-- menu content -->
-        <div class="tm-product">
-          <img src="{{asset('template')}}/img/menu-1.jpg" alt="Product">
-          <div class="tm-product-text">
-            <h3 class="tm-product-title">Americano 1</h3>
-            <p class="tm-product-description">Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque. Red ipsum.</p>
+        @foreach ($data as $item)
+          <div class="tm-product">
+            <img src="{{$item->image}}" alt="Product">
+            <div class="tm-product-text">
+              <h3 class="tm-product-title">{{$item->title}}</h3>
+              <p class="tm-product-description">{{$item->description}}</p>
+            </div>
+          
+            <div class="tm-product-price">
+              <a href="#" class="tm-product-price-link tm-handwriting-font"><span class="tm-product-price-currency">$</span>{{$item->harga}}</a>
+            </div>
           </div>
-          <div class="tm-product-price">
-            <a href="#" class="tm-product-price-link tm-handwriting-font"><span class="tm-product-price-currency">$</span>30</a>
-          </div>
-        </div>
+        @endforeach
+          {{--
         <div class="tm-product">
           <img src="{{asset('template')}}/img/menu-2.jpg" alt="Product">
           <div class="tm-product-text">
@@ -106,7 +110,7 @@
           <div class="tm-product-price">
             <a href="#" class="tm-product-price-link tm-handwriting-font"><span class="tm-product-price-currency">$</span>45</a>
           </div>
-        </div>
+        </div> --}}
       </div>
     </div>          
   </section>
