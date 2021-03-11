@@ -23,29 +23,29 @@
               <div class="box-header with-border">
                 <h3 class="box-title">Latest Members</h3>
 
-                <div class="box-tools pull-right">
-                  <span class="label label-danger">8 New Members</span>
-                  <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-                  </button>
-                  <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i>
-                  </button>
-                </div>
+                  {{-- <div class="box-tools pull-right">
+                    <span class="label label-danger">8 New Members</span>
+                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                    </button>
+                    <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i>
+                    </button>
+                  </div> --}}
               </div>
               <!-- /.box-header -->
-                @foreach ($data as $item)
               <div class="box-body no-padding">
                 <ul class="users-list clearfix">
 
+                @foreach ($data as $item)
                   <li>
                     <img src="{{$item->image}}" alt="User Image">
                     <a class="users-list-name" href="#">{{$item->nama}}</a>
                     <span class="users-list-date">{{$item->tanggal}}</span>
                   </li>  
 
+                @endforeach
                 </ul>
                 <!-- /.users-list -->
               </div>
-                @endforeach
               <!-- /.box-body -->
               <div class="box-footer text-center">
                 <a href="javascript:void(0)" class="uppercase">View All Users</a>
