@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Menu;
+use App\Models\Customer;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -22,5 +23,10 @@ class HomeController extends Controller
     
     public function today(){
         return view('spesial', ['title' => 'Today Spesial']);
+    }
+    
+    public function customer(){
+        $customer = Customer::all();
+        return view('customer', ['data' => $customer], ['title' => 'Customer']);
     }
 }

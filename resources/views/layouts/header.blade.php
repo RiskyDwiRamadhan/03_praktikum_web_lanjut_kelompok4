@@ -15,6 +15,7 @@
                   <li><a href="{{ url('/') }}" class="active">Home</a></li> 
                   <li><a href="{{ url('/today') }}">Today Special</a></li>
                   <li><a href="{{ url('/menu') }}">Menu</a></li>
+                  <li><a href="{{ url('/customer') }}">Customer</a></li>
                   <li><a href="{{ url('/contact') }}">Contact</a></li>
                 </ul>
               </nav>   

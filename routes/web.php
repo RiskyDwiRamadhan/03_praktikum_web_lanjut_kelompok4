@@ -18,5 +18,6 @@ Route::get('/', [HomeController::class, 'index']);
 Route::get('/contact', [HomeController::class, 'contact']);
 Route::get('/menu', [HomeController::class, 'menu']);
 Route::get('/today', [HomeController::class, 'today']);
+Route::get('/customer', [HomeController::class, 'customer']);
 
 // Route::get('/', [MenuController::class, 'menu']);

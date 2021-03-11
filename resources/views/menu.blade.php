@@ -56,7 +56,8 @@
           <img src="{{asset('template')}}/img/vertical-menu-bg.png" alt="Menu bg" class="tm-side-menu-bg">
         </div>  
       </div>            
-      <div class="tm-menu-product-content col-lg-9 col-md-9"> <!-- menu content -->
+      <div class="tm-menu-product-content col-lg-9 col-md-9"> 
+        <!-- menu content -->
         @foreach ($data as $item)
           <div class="tm-product">
             <img src="{{$item->image}}" alt="Product">
